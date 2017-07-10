@@ -11,10 +11,12 @@ For windows user:
 2. Download latest and stable version of zookeeper(http://www-eu.apache.org/dist/zookeeper/stable/) 
 3. Download latest version of kafka (https://www.apache.org/dyn/closer.cgi?path=/kafka/0.11.0.0/kafka_2.12-0.11.0.0.tgz as am using scala 2.12) else you can download it from(https://kafka.apache.org/downloads)
 
-how to configure:
+# how to configure:
+
 First step : Installing java & setting up the Environmental Variables
 
 Install java from the Extracted file
+
 Change the installation directory to any path without spaces in folder name. Ex C:\Java\jre1.8.0_xx\. (By default it will be C:\Program Files\Java\jre1.8.0_xx) 
 
 Set the environmental variables:
