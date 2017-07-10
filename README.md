@@ -5,7 +5,7 @@ how to setup kafka in windows/linux environment
 
 # Prerequisite
 
-For windows user:
+# OS: WINDOWS  
 
 1. Download latest version of java (http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) or (http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
 2. Download latest and stable version of zookeeper(http://www-eu.apache.org/dist/zookeeper/stable/) 
@@ -13,7 +13,7 @@ For windows user:
 
 # how to configure:
 
-# FIRST STEP : Installing java & setting up the Environmental Variables
+# Installing JAVA & setting up the Environmental Variables
 
 Install java from the Extracted file
 
@@ -34,7 +34,7 @@ To check weather you have installed latest version of java . Type "java -version
     Java HotSpot(TM) 64-Bit Server VM (build 25.112-b15, mixed mode)
 If you are unable see this output. Try to re-install setup again.
 
-# SECOND STEP : Installing and setting up ZOOKEEPER
+# Installing and setting up ZOOKEEPER
 
 unzip the file that you have downloaded.
 
@@ -54,7 +54,7 @@ Add in System Variables ZOOKEEPER_HOME = C:\zookeeper-3.4.10
 Edit System Variable named “Path” add ;%ZOOKEEPER_HOME%\bin;
 
 
-# THIRD STEP: Kafka installation
+# KAFKA installation
 
 unzip the file.Go to your Kafka config directory. For me its C:\kafka_2.12-0.11.0.0\config then Edit file “server.properties
 
@@ -67,7 +67,7 @@ Your Kafka will run on default port 9092 & connect to zookeeper’s default port
 
 
 
-for linux users:
+# OS: Linux
 
 1.Install java latest version using command
          for centos : use sudo yum install java-1.8.0-openjdk.x86_64.
@@ -96,15 +96,17 @@ for linux users:
  Reload the profile to put your changes into effect:
  type : source /etc/profile
  
+ 
  # kafka configuration
  unzip the tar file and move contents to preffered location using
  
  tar -xvf kafka_2.11-0.9.0.1.tgz 
  sudo mv kafka_2.11-0.9.0.1 /opt
  
- To configure kafka use
+ To configure kafka files use
  vi bin/kafka-server-start.sh 
-
+ vi config/server.properties
+ 
 
    
    
