@@ -13,7 +13,7 @@ For windows user:
 
 # how to configure:
 
-FIRST STEP : Installing java & setting up the Environmental Variables
+# FIRST STEP : Installing java & setting up the Environmental Variables
 
 Install java from the Extracted file
 
@@ -34,7 +34,7 @@ To check weather you have installed latest version of java . Type "java -version
     Java HotSpot(TM) 64-Bit Server VM (build 25.112-b15, mixed mode)
 If you are unable see this output. Try to re-install setup again.
 
-SECOND STEP : Installing and setting up ZOOKEEPER
+# SECOND STEP : Installing and setting up ZOOKEEPER
 
 unzip the file that you have downloaded.
 
@@ -54,7 +54,7 @@ Add in System Variables ZOOKEEPER_HOME = C:\zookeeper-3.4.10
 Edit System Variable named “Path” add ;%ZOOKEEPER_HOME%\bin;
 
 
-THIRD STEP: Kafka installation
+# THIRD STEP: Kafka installation
 
 unzip the file.Go to your Kafka config directory. For me its C:\kafka_2.12-0.11.0.0\config then Edit file “server.properties
 
@@ -67,7 +67,43 @@ Your Kafka will run on default port 9092 & connect to zookeeper’s default port
 
 
 
+for linux users:
 
+1.Install java latest version using command
+         for centos : use sudo yum install java-1.8.0-openjdk.x86_64.
+         for ubuntu : use sudo apt-get install openjdk-8-jdk
+
+2.Download zookeeper using following command wget http://www-eu.apache.org/dist/zookeeper/stable/zookeeper-3.4.10.tar.gz 
+
+3.Download kafka : wget http://www-eu.apache.org/dist/kafka/0.11.0.0/kafka_2.12-0.11.0.0.tgz 
+ 
+ # how to configure JAVA and KAFKA in centos
+ 
+ # Java configaration
+ after installing java set the environmental variables.
+ we can set environmental veriables for every user by editing /etc/profile file
+ 
+ To edit that file type: sudo vi /etc/profile in terminal
+ 
+ Add this content at the bottom of the file.
+ export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk.x86_64
+ export JRE_HOME=/usr/lib/jvm/jre 
+ 
+ make sure that u are giving the exact jre & jdk path.before configuring check throghly.
+ 
+ Save and quit: :wq 
+ 
+ Reload the profile to put your changes into effect:
+ type : source /etc/profile
+ 
+ # kafka configuration
+ unzip the tar file and move contents to preffered location using
+ 
+ tar -xvf kafka_2.11-0.9.0.1.tgz 
+ sudo mv kafka_2.11-0.9.0.1 /opt
+ 
+ To configure kafka use
+ vi bin/kafka-server-start.sh 
 
 
    
