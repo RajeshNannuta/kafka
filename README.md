@@ -13,7 +13,7 @@ For windows user:
 
 # how to configure:
 
-First step : Installing java & setting up the Environmental Variables
+FIRST STEP : Installing java & setting up the Environmental Variables
 
 Install java from the Extracted file
 
@@ -33,6 +33,41 @@ To check weather you have installed latest version of java . Type "java -version
     Java(TM) SE Runtime Environment (build 1.8.0_112-b15)
     Java HotSpot(TM) 64-Bit Server VM (build 25.112-b15, mixed mode)
 If you are unable see this output. Try to re-install setup again.
+
+SECOND STEP : Installing and setting up ZOOKEEPER
+
+unzip the file that you have downloaded.
+
+create a folder in c: drive as zookeeper-3.4.10 and move the extracted files into that folder.
+
+Goto your zookeeper config directory. For me its C:\zookeeper-3.4.10\conf
+
+Rename file “zoo_sample.cfg” to “zoo.cfg”
+
+Open zoo.cfg and edit dataDir=/tmp/zookeeper to dataDir=C:\zookeeper-3.4.10\data
+
+if needed You can change the default zookeeper port in zoo.cfg file (Default port 2181).
+
+Environmental variables:
+
+Add in System Variables ZOOKEEPER_HOME = C:\zookeeper-3.4.10
+Edit System Variable named “Path” add ;%ZOOKEEPER_HOME%\bin;
+
+
+THIRD STEP: Kafka installation
+
+unzip the file.Go to your Kafka config directory. For me its C:\kafka_2.12-0.11.0.0\config then Edit file “server.properties
+
+edit line “log.dirs=/tmp/kafka-logs” to “log.dir= C:\kafka_2.12-0.11.0.0\kafka-logs”
+
+If your zookeeper is running on some other machine or cluster you can edit “zookeeper.connect=localhost:2181” to your custom IP & port. Also Kafka port & broker.id are configurable in this file. Leave other settings as it is.
+
+Your Kafka will run on default port 9092 & connect to zookeeper’s default port which is 2181.
+
+
+
+
+
 
 
    
