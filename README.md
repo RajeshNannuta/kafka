@@ -32,7 +32,7 @@ To check weather you have installed latest version of java . Type "java -version
     java version "1.8.0_112"
     Java(TM) SE Runtime Environment (build 1.8.0_112-b15)
     Java HotSpot(TM) 64-Bit Server VM (build 25.112-b15, mixed mode)
-If you are unable see this output. Try to re-install setup again or check you have older versions java is installed in your system.
+If you are unable see this output. Try to re-install setup again.
 
 
    
